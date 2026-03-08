@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🦞 龙虾 OpenClaw Manager 小白版</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient"></div>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">🦞</div>
+          <div>
+            <h1 id="title"></h1>
+            <p id="subtitle"></p>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#overview" class="nav-item" id="navOverview"></a>
+          <a href="#models" class="nav-item" id="navModels"></a>
+          <a href="#keys" class="nav-item" id="navKeys"></a>
+          <a href="#channels" class="nav-item" id="navChannels"></a>
+        </nav>
+        <button id="langBtn" class="btn ghost">EN</button>
+      </aside>
+
+      <main class="main">
+        <section id="overview" class="card hero">
+          <div>
+            <p class="label" id="gatewayLabel"></p>
+            <p id="gatewayStatus" class="status"></p>
+          </div>
+          <button id="refreshBtn" class="btn" type="button"></button>
+        </section>
+
+        <section id="models" class="card">
+          <div class="head">
+            <h2 id="modelsTitle"></h2>
+            <span id="countTag" class="tag"></span>
+          </div>
+          <div id="modelsContainer" class="grid"></div>
+        </section>
+
+        <section id="keys" class="card">
+          <div class="head">
+            <h2 id="keysTitle"></h2>
+          </div>
+          <div id="keysContainer" class="grid key-grid"></div>
+        </section>
+
+        <section id="channels" class="card">
+          <div class="head">
+            <h2 id="channelsTitle"></h2>
+          </div>
+          <div class="channel-row">
+            <div>
+              <p class="label" id="telegramLabel"></p>
+              <p id="telegramStatus" class="status small"></p>
+            </div>
+            <div class="channel-actions">
+              <input id="telegramToken" class="input" type="password" />
+              <button id="saveTelegramBtn" class="btn" type="button"></button>
+              <button id="removeTelegramBtn" class="btn ghost" type="button"></button>
+            </div>
+          </div>
+        </section>
+
+        <p id="msg" class="msg"></p>
+      </main>
+    </div>
+
+    <div id="setupOverlay" class="overlay hidden">
+      <div class="setup-card">
+        <h3 id="setupTitle"></h3>
+        <p id="setupDesc"></p>
+        <div class="setup-steps">
+          <div class="setup-step">
+            <div>
+              <p id="setupNodeLabel"></p>
+              <p id="setupNodeState" class="step-state"></p>
+            </div>
+            <button id="installNodeBtn" class="btn" type="button"></button>
+          </div>
+          <div class="setup-step">
+            <div>
+              <p id="setupClawLabel"></p>
+              <p id="setupClawState" class="step-state"></p>
+            </div>
+            <button id="installClawBtn" class="btn" type="button"></button>
+          </div>
+          <div class="setup-step">
+            <div>
+              <p id="setupInitLabel"></p>
+              <p id="setupInitState" class="step-state"></p>
+            </div>
+            <button id="initBtn" class="btn" type="button"></button>
+          </div>
+        </div>
+        <button id="retrySetupBtn" class="btn ghost" type="button"></button>
+      </div>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

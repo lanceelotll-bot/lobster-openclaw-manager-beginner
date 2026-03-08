@@ -1,0 +1,4 @@
+interface:
+  display_name: "🦞 龙虾 OpenClaw Manager 小白版"
+  short_description: "通过本地可视化管理台安装、配置和管理 OpenClaw"
+  default_prompt: "Use $openclaw-manager to install, configure, or operate OpenClaw through the beginner-friendly local control panel."
